@@ -1,0 +1,110 @@
+:root {
+	--primario: #443D44;
+	--secundario: #B10DC9;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.contenedor {
+	width: 90%;
+	margin: 0 auto;
+}
+nav {
+	background-color: var(--secundario);
+	color: white;
+	font-size: 1.3rem;
+}
+a {
+	text-decoration: none;
+}
+a:visited {
+	color: inherit;
+}
+ul {
+	padding: 20px;	
+}
+nav ul li {
+	display: inline;
+	padding: 10px;
+	cursor: pointer;
+
+}
+nav li:hover {
+	opacity: 0.5;
+}
+.panel {
+	height: 100vh;
+	padding: 20px;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+.panel h2 {
+	color: var(--secundario);
+	position: relative;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.panel h2:after {
+ 	content : "";
+  	position: absolute;
+  	left    : 0;
+  	bottom  : 0;
+  	height  : 1px;
+  	width   : 20%;
+  	border-bottom: 1px solid var(--secundario);
+}
+.btn {
+	border: none;
+	background-color: var(--secundario);
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+.btn:hover {	
+	background-color: var(--primario);
+}
+
+/**/
+#top > div:first-child {
+	position: absolute;
+}
+#top-showcase {
+	width: 40vw;
+    height: 40vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#top-showcase:hover {
+	opacity: 0.9;
+}
+#contenedor-lista {
+	top: 20%;
+	left: 40%;
+	position: relative;
+	display: inline-block;
+	height: 300px;
+	width: 400px;
+}
+#top ul {
+	list-style: none;
+}
+#top li {
+	cursor: pointer;
+	padding: 10px;
+	font-size: 1.2rem;
+	list-style: none;
+	background-color: magenta;
+	color: white;
+	margin-bottom: 10px;
+}
+#top li .seleccionado, #top li:hover {
+	background-color: var(--primario);
+}
+#contenedor-lista {
+	width: 40%;
+}
