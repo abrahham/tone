@@ -7,10 +7,14 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-.contenedor {
+html {
+	    font-family: Roboto, 'Helvetica', 'Arial';
+}
+/*.contenedor {
 	width: 90%;
 	margin: 0 auto;
-}
+	padding: 10px;
+}*/
 nav {
 	background-color: var(--secundario);
 	color: white;
@@ -43,7 +47,7 @@ nav li:hover {
 .panel h2 {
 	color: var(--secundario);
 	position: relative;
-	padding: 5px;
+	
 	margin-bottom: 10px;
 }
 .panel h2:after {
@@ -54,6 +58,11 @@ nav li:hover {
   	height  : 1px;
   	width   : 20%;
   	border-bottom: 1px solid var(--secundario);
+}
+.p-fondo {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .btn {
 	border: none;
@@ -67,12 +76,42 @@ nav li:hover {
 .btn:hover {	
 	background-color: var(--primario);
 }
-
-/**/
-#top > div:first-child {
-	position: absolute;
+/* Panel de noticias */
+#noticias {
+	display: grid;
+	grid-template-columns: 1fr 70%;
 }
-#top-showcase {
+.card {
+	display: flex;
+	flex-direction: row;
+	box-shadow: 0 1px 3px 0;
+	width: 400px;
+	cursor: pointer;
+}
+.card:hover {
+	box-shadow: 0 3px 7px 0;
+}
+.card > p {
+	padding: 5px;
+	color: var(--secundario);
+	font-size: 1.1rem;
+}
+.card img {
+	width: 50%;
+}
+#reja-noticias {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px 200px;
+}
+/* Panel de Top 7*/
+#top  {
+	display: grid;
+	grid-template-columns: 1fr 50%;
+}
+#top-showcase {	
+	position: relative;
 	width: 40vw;
     height: 40vw;
 	background-repeat: no-repeat;
@@ -83,17 +122,18 @@ nav li:hover {
 	opacity: 0.9;
 }
 #contenedor-lista {
-	top: 20%;
-	left: 40%;
-	position: relative;
+	top: 40%;
+	right: 110%;
+	position: absolute;
 	display: inline-block;
-	height: 300px;
-	width: 400px;
+	width: 40%;
 }
 #top ul {
 	list-style: none;
 }
 #top li {
+	border-left: 5px solid var(--primario);
+	min-width: 400px;
 	cursor: pointer;
 	padding: 10px;
 	font-size: 1.2rem;
@@ -102,9 +142,7 @@ nav li:hover {
 	color: white;
 	margin-bottom: 10px;
 }
-#top li .seleccionado, #top li:hover {
+.seleccionado, #top li:hover {
 	background-color: var(--primario);
-}
-#contenedor-lista {
-	width: 40%;
+	border-left: 5px solid var(--secundario);
 }

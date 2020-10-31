@@ -3,26 +3,59 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 <body>
 	<nav>
-		<div class="contenedor">
-			<ul>
-				<li><a>Tone</a></li>
-				<li><a>Noticias</a></li>
-				<li><a href="#top">Top 7</a></li>
-				<li><a>Nuevas promesas</a></li>
-			</ul>
-		</div>
+		<ul>
+			<li><a>Tone</a></li>
+			<li><a href="#noticias">Noticias</a></li>
+			<li><a href="#top">Top 7</a></li>
+			<li><a>Reseñas</a></li>
+		</ul>
 	</nav>
-	<div class="contenedor">
-		<div class="panel" id="noticias">
-			<h2>últimas noticas</h2>
-		</div>
-		<div class="panel" id="top">			
-			<div style="background-image: url('img/marlowe2.jpg');" id="top-showcase">
-				
+	<div style="background-image: url('img/artista.jpg');" class="panel p-fondo" id="land">
+		<h1>Tone</h1>
+	</div>
+	<div class="panel" id="noticias">		
+		<div class="titulo-cont">
+			<h2>Últimas noticias</h2>
+			<div>
+				<p>
+					Noticias
+				</p>
 			</div>
+		</div>		
+		<div id="reja-noticias">
+			<div class="card">
+				<img src="img/noticias/noticia1.jpg">
+				<p>¡Astroid Boys está de regreso!</p>
+			</div>
+			<div class="card">
+				<img src="img/noticias/noticia2.jpg">
+				<p>Nuevo disco de Freddie Gibbs con la colaboración de un famoso productor</p>
+			</div>
+			<div class="card">
+				<img src="img/noticias/noticia3.jpg">
+				<p>Lorna Shore, a un año de la salida de C.J.</p>
+			</div>
+			<div class="card">
+				<img src="img/noticias/noticia4.png">
+				<p>Ameer Vann muestra nuevos snippets de próximo disco</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel" id="top">
+		<div class="titulo-cont">
+			<h2>Top 7</h2>
+			<div>
+				<p>
+					Aquí te tenemos el top de las mejores 7 canciones del mes.
+					¡Date un momento y escuchalas!
+				</p>
+			</div>
+		</div>		
+		<div style="background-image: url('img/marlowe2.jpg');" id="top-showcase">
 			<div id="contenedor-lista">
 				<ul id="top-lista">
 					<li class="seleccionado">Marlowe - Small Business</li>
@@ -31,19 +64,24 @@
 					<li>Boldy James & The Alchemist - Run-ins</li>
 					<button class="btn">Ver más...</button>
 				</ul>
+			</div>	
+		</div>			
+	</div>
+	<div class="panel" id="resenias">
+		<div class="titulo-cont">
+			<h2>Últimas reseñas</h2>
+			<div>
+				<p>
+					Aquí te tenemos el top de las mejores 7 canciones del mes.
+					¡Date un momento y escuchalas!
+				</p>
 			</div>
-			<!--<div id="contenedor-lista">
-				<ul id="top-lista">
-					<li class="seleccionado">Marlowe - Small Business</li>
-					<li>Earl Sweatshirt - Knight</li>
-					<li>Injury Reserve - Yo</li>
-					<li>Boldy James & The Alchemist - Run-ins</li>
-					<button class="btn">Ver más...</button>
-				</ul>
-			</div>-->
+		</div>	
+		<div>
+			<img src="">
 		</div>
-		<div class="panel" id="nuevas">
-			<h2>Nuevas promesas</h2>
+		<div>
+
 		</div>
 	</div>
 	<script type="text/javascript" src="js/main.js"></script>
