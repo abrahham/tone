@@ -33,7 +33,7 @@ nav li:hover {
 	border-bottom: 3px solid var(--primario);
 }
 .panel {
-	min-height: 100vh;
+	min-height: 50vh;
 	padding: 20px;
 	width: 100%;
 }
@@ -50,11 +50,6 @@ nav li:hover {
   	height  : 1px;
   	width   : 20%;
   	border-bottom: 1px solid var(--secundario);
-}
-.p-fondo {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 }
 .btn {
 	border: none;
@@ -117,17 +112,16 @@ nav li:hover {
 }
 #contenedor-lista {
 	top: 40%;
-	right: 110%;
+	left: -50%;
 	position: absolute;
 	display: inline-block;
-	width: 40%;
+	min-width: 400px;
 }
 #top ul {
 	list-style: none;
 }
 #top li {
 	border-left: 5px solid var(--primario);
-	min-width: 400px;
 	cursor: pointer;
 	padding: 10px;
 	font-size: 1.2rem;
@@ -158,4 +152,29 @@ nav li:hover {
 }
 .imagen-resenia > div {
 	padding: 10px;
+}
+
+/* Media queries */
+@media only screen and (max-width: 600px) {
+	#noticias, #resenias, #top {		
+		grid-template-columns: 1fr;
+		
+	}
+	#top-showcase {
+		margin-top: 10px;
+		width: auto;
+		height: 60vw;
+	}
+	#contenedor-lista {
+		min-width: inherit;
+		padding: 0;
+		left: 0%;
+		top: 0%;		
+	}
+	#contenedor-lista li {
+		padding: 5px;
+		opacity: 0.7;
+		margin-bottom: 0;
+		border-bottom: 1px solid var(--primario);
+	}
 }
