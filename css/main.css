@@ -8,13 +8,8 @@
 	box-sizing: border-box;
 }
 html {
-	    font-family: Roboto, 'Helvetica', 'Arial';
+	font-family: Roboto, 'Helvetica', 'Arial';
 }
-/*.contenedor {
-	width: 90%;
-	margin: 0 auto;
-	padding: 10px;
-}*/
 nav {
 	background-color: var(--secundario);
 	color: white;
@@ -33,21 +28,18 @@ nav ul li {
 	display: inline;
 	padding: 10px;
 	cursor: pointer;
-
 }
 nav li:hover {
-	opacity: 0.5;
+	border-bottom: 3px solid var(--primario);
 }
 .panel {
-	height: 100vh;
+	min-height: 100vh;
 	padding: 20px;
 	width: 100%;
-	border-bottom: 1px solid black;
 }
 .panel h2 {
 	color: var(--secundario);
-	position: relative;
-	
+	position: relative;	
 	margin-bottom: 10px;
 }
 .panel h2:after {
@@ -77,33 +69,35 @@ nav li:hover {
 	background-color: var(--primario);
 }
 /* Panel de noticias */
-#noticias {
-	display: grid;
-	grid-template-columns: 1fr 70%;
-}
-.card {
-	display: flex;
-	flex-direction: row;
-	box-shadow: 0 1px 3px 0;
-	width: 400px;
-	cursor: pointer;
-}
-.card:hover {
-	box-shadow: 0 3px 7px 0;
-}
-.card > p {
-	padding: 5px;
-	color: var(--secundario);
-	font-size: 1.1rem;
-}
-.card img {
-	width: 50%;
-}
-#reja-noticias {
+#noticias, #resenias {
 	display: grid;
 	gap: 20px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px;
+	grid-template-columns: 1fr 30% 30%;
+}
+#noticias img {
+	border-radius: 5px;
+	width: 100%;
+	max-height: 300px;
+}
+.imagen-noticia {
+	margin-bottom: 10px;
+}
+.imagen-noticia h3 {
+	color: var(--secundario);
+}
+.imagen-noticia > div {
+	min-height: 100px;
+}
+.imagen-noticia > div > * {
+	margin-top: 5px;
+}
+.columna {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.columna img {
+	box-shadow: 0 1px 3px 0;
 }
 /* Panel de Top 7*/
 #top  {
@@ -145,4 +139,23 @@ nav li:hover {
 .seleccionado, #top li:hover {
 	background-color: var(--primario);
 	border-left: 5px solid var(--secundario);
+}
+/* Panel de reseñas */
+#resenias {
+	background-color: var(--primario);
+	color: white;
+}
+.imagen-resenia {
+	margin: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.imagen-resenia img {
+	border-radius: 5px;
+	height: 200px;
+	width: 200px;
+}
+.imagen-resenia > div {
+	padding: 10px;
 }
