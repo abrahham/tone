@@ -63,6 +63,22 @@ nav li:hover {
 .btn:hover {	
 	background-color: var(--primario);
 }
+/* Panel land */
+#land {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#land > h1 {
+	color: var(--secundario);
+}
+#land > div {
+	margin-top: 10px;
+	padding: 20px;
+	background-color: var(--primario);
+	color: white;
+}
 /* Panel de noticias */
 #noticias, #resenias {
 	display: grid;
@@ -121,16 +137,16 @@ nav li:hover {
 	list-style: none;
 }
 #top li {
-	border-left: 5px solid var(--primario);
 	cursor: pointer;
 	padding: 10px;
 	font-size: 1.2rem;
 	list-style: none;
-	background-color: magenta;
+	border-left: 5px solid var(--primario);
+	background-color: var(--secundario);
 	color: white;
 	margin-bottom: 10px;
 }
-.seleccionado, #top li:hover {
+#top li:hover, #top li.seleccionado  {
 	background-color: var(--primario);
 	border-left: 5px solid var(--secundario);
 }
